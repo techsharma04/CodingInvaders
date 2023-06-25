@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;   
+   background-color: #000;
+   padding:40px;
+}
+body{
+    background-color: #fff;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 10%);
+  padding: 0 20px;
+
+}
+.left-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.right-header ul {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul > li {
+  list-style: none;
+  padding: 10px;
+  margin: 0 15px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: antiquewhite;
+}
+a, span {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.signup-btn,
+.start-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #f1eded;
+  padding: 0 20px;
+  height: 35px;
+}
+.start-btn {
+  background-color: #4e8dc7;
+  color: white;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.left-section{
+    width: 50%;
+    padding: 3px 100px;
+}
+.left-section > p {
+    margin: 30px 20px;
+}
+.banner-heading {
+    font-size: 80px;
+    line-height: 85px;
+    font-weight: 700;
+    padding-right: 100px;
+}
+.banner-btn-box {
+    display: flex;
+    align-items: center;
+  }
+  .banner-btn-box span {
+      margin: 20px;
+  }
+.right-section{
+    width: 50%;;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px;
+  }
+ .left-footer a, .right-footer{   
+    margin-right: 35px;
+ }
+  .left-footer a:hover{
+      color: #4e8dc7;
+  }
+
+  

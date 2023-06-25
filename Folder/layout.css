@@ -1,0 +1,31 @@
+body {
+    overflow: hidden; /* Hide scrollbars */
+  }
+.header{
+    width: 100%;
+    height: fit-content;
+    background-color: #363636;
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    color:aliceblue;
+    padding: 1em;
+}
+
+@media only screen and (max-width: 850px) {
+    
+    .navigation{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1em;
+        color:aliceblue;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+}
+
+

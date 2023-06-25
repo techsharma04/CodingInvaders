@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10</title>
+    <style>
+        div{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" id="myForm">
+
+        <div>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" placeholder="Enter your first name">
+        </div>
+        <div>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" placeholder="Enter your last name">
+        </div><div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Enter your email">
+        </div><div>
+            <label for="city">City:</label>
+            <select id="city">
+                <option>Mumbai</option>
+            </select>
+        </div><div>
+            <label>Gender</label>
+            <input type="radio" id="gender" name="fav_language" value="Male">
+            <label for="html">Male</label>
+            <input type="radio" id="gender" name="fav_language" value="Female">
+            <label for="css">Female</label>
+            <input type="radio" id="gender" name="fav_language" value="Other">
+            <label for="javascript">Other</label>
+        </div>
+
+        <button type="button" onclick="submitData()">Submit</button>
+
+
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>

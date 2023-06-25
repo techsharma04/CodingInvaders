@@ -1,0 +1,289 @@
+* {
+    font-family: "Inter", sans-serif;
+  }
+ 
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: white;
+    background: #020202;
+  }
+  .logo {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo > span {
+    width: 167px;
+    height: 24px;
+    font-family: "Times";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  ul > li {
+    list-style: none;
+    padding: 25px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #eaeff0;
+  }
+  .home {
+    color: #69a799;
+  }
+  
+  #login-button {
+    background-color: transparent;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: #eaeff0;
+    margin-right: 20px;
+  }
+  #signup-button {
+    padding: 12px 24px;
+    width: 120px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 15px;
+    background: #69a799;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    color: #eaeff0;
+    cursor: pointer;
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left-main > * {
+    margin-bottom: 30px;
+  }
+  .left-main {
+    padding: 50px 0 0 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .left_main, .right-main{
+    width: 50%;
+  }
+  .left-main h1 {
+    font-weight: 900;
+    font-size: 56px;
+    color: #69a799;
+  }
+  .left-main > h2 {
+    font-family: "Dancing Script";
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 58px;
+    color: #ff9090;
+  }
+  .left-main > p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+  }
+  #explore-now-button {
+    width: 219.93px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    background: #69a799;
+    border-radius: 30px;
+    border: 0;
+    padding: 20px 40px;
+  }
+  #order-now-button {
+    width: 219.93px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+    background: #eaeff0;
+    border-radius: 30px;
+    border: 0;
+    padding: 20px 40px;
+  }
+  .hero-image {
+    width: 100%;
+  }
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeff0;
+  }
+  .form-sections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+  }
+  .form-section h3 {
+    font-family: "Noteworthy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #69a799;
+  }
+  .form-section h4 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+  }
+  .user-name {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .form-input {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    gap: 5px;
+    flex-direction: column;
+  }
+  label {
+    font-weight: 500;
+    font-size: 10px;
+  }
+  input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  #first-name,
+  #last-name {
+    width: 224px;
+  }
+  #phone,
+  #email,
+  #message {
+    width: 480px;
+  }
+  textarea {
+    border: none;
+    padding: 10px;
+  }
+  .form-input-checkbox {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  a {
+    text-decoration: underline black;
+    color: black;
+  }
+  .submit-btn {
+    border: 1px solid #69a799;
+    outline: none;
+    width: 500px;
+    background-color: #69a799;
+    padding: 10px;
+    box-shadow: 0px 1px 2px 0px #101828;
+  }
+  
+  .video-container {
+    width: 50%;
+  }
+  .video-container video {
+    width: 100%
+  }
+  .footer {
+    text-align: center;
+    width: 100%;
+    height: 195px;
+    background: #f9fafb;
+  }
+  
+  .footer h4 {
+    font-family: "Times";
+    font-style: normal;
+    line-height: 30px;
+    color: #020202;
+  }
+  .copyright {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        height: fit-content;
+        padding: 30px 0; 
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        height: fit-content;
+    }
+    section {
+        display: flex;
+        flex-direction: column-reverse;
+        height: fit-content;
+        gap: 0;
+    }
+    .hero-image{
+        width: 100%;
+    }
+    .form-input, .user-name{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      
+    }
+    #first-name,
+    #last-name {
+      width: 250px;
+    }
+    #phone,
+    #email,
+    #message {
+      width: 250px;
+    }
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
