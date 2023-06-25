@@ -21,16 +21,16 @@ function ageCalculator() {
   const currentDay = currentDate.getDate();
   const currentMonth = currentDate.getMonth() + 1;
   const currentYear = currentDate.getFullYear();
+  
+  let d = document.getElementById("date").value;
+  let m = document.getElementById("month").value;
+  let y = document.getElementById("year").value;
 
-  let d = Math.floor(document.getElementById("date").value);
-  let m = Math.floor(document.getElementById("month").value);
-  let y = Math.floor(document.getElementById("year").value);
-
-  if (d === '') {
+  if (d === "") {
     document.getElementById("result").innerText = "Please provide date";
   } else if (isNaN(d)) {
     document.getElementById("result").innerText = "Please provide valid date";
-  } else if (d <= 0) {
+  } else if (Number(d) <= 0) {
     document.getElementById("result").innerText =
       "Date cannot be 0 or less than 0";
   } else {
@@ -39,13 +39,13 @@ function ageCalculator() {
     } else if (isNaN(m)) {
       document.getElementById("result").innerText =
         "Please provide valid Month";
-    } else if (m < 1 || m > 12) {
+    } else if (Number(m) < 1 || Number(m) > 12) {
       document.getElementById("result").innerText =
         "Please provide Month value in the range from 1 to 12";
-    } else if (m <= 0) {
+    } else if (Number(m) <= 0) {
       document.getElementById("result").innerText =
         "Month cannot be 0 or less than 0";
-    } else if (objKeys[m] - 1 === m && d > objValues[m - 1]) {
+    } else if (objKeys[Number(m)] - 1 === Number(m) && d > objValues[m - 1]) {
       document.getElementById("result").innerText =
         "Please provide valid Date with respect to Month";
     } else {
@@ -56,39 +56,39 @@ function ageCalculator() {
           "Please provide valid year";
       } else if (y.length < 4 || y.length > 4) {
         document.getElementById("result").innerText = "Provide year in format YYYY";
-      } else if (y <= 0) {
+      } else if (Number(y) <= 0) {
         document.getElementById("result").innerText =
           "Year cannot be 0 or less than 0";
-      } else if (y > currentYear) {
+      } else if (Number(y) > currentYear) {
         document.getElementById(
           "result"
         ).innerText = `Year can't be greater than current year of ${currentYear}`;
-      } else if (y >= currentYear && m >= currentMonth && d > currentDay) {
+      } else if (Number(y) >= currentYear && Number(m) >= currentMonth && Number(d) > currentDay) {
         document.getElementById(
           "result"
         ).innerText = `Selected date must be lower than today's date (${currentDay}/${currentMonth}/${currentYear}) `;
       } else {
-        let ageYears = currentYear - y;
+        let ageYears = currentYear - Number(y);
 
         let ageMonths = null;
-        if (currentMonth > m) {
-          ageMonths = currentMonth - m;
-        } else if (currentMonth === m) {
-          ageMonths = currentMonth - m;
+        if (currentMonth > Number(m)) {
+          ageMonths = currentMonth - Number(m);
+        } else if (currentMonth === Number(m)) {
+          ageMonths = currentMonth - Number(m);
         } else {
-          ageMonths = currentMonth - m + 12;
+          ageMonths = currentMonth - Number(m) + 12;
           ageYears--;
         }
 
         let ageDays = null;
-        if (currentDay >= d) {
-          ageDays = currentDay - d;
-        } else if (currentDay < d && ageMonths === 0) {
-          ageDays = d - currentDay;
+        if (currentDay >= Number(d)) {
+          ageDays = currentDay - Number(d);
+        } else if (currentDay < Number(d) && ageMonths === 0) {
+          ageDays = Number(d) - currentDay;
           ageMonths--;
           ageYears--;
         } else {
-          ageDays = currentDay - d + objValues[m];
+          ageDays = currentDay - Number(d) + objValues[Number(m)];
           ageMonths--;
         }
 
