@@ -75,12 +75,12 @@ let toDoList = (items, isPrior) => {
 
     // Complete button click event
     completeButton.addEventListener("click", () => {
-        div.style.opacity = "0.3";
+        completeButton.parentElement.style.opacity = 0.3;
     });
 
     // Delete button click event
     deleteButton.addEventListener("click", () => {
-        div.remove();
+        completeButton.parentElement.remove();
     });
 }
 
