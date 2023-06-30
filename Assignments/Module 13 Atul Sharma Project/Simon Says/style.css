@@ -16,7 +16,7 @@ body {
     border-left: 0.5px dashed white;
     text-align: center;
 }
-p{
+h1{
     color: white;
     text-align: center;
 }
@@ -74,9 +74,18 @@ p{
 .section{
     color: white;
 }
+.section > li {
+    text-align: justify;
+    padding: 10px 5%;
+}
 .opacity{
     opacity: 0.2;
 }
 .flash {
     opacity: 1;
+}
+.msg > p{
+    color: red;
+    font-size: 25px;
+    text-align: center;
 }
