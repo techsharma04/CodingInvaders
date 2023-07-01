@@ -1,0 +1,29 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+}
+.header > button {
+    width: 200px;
+    height: 45px;
+    font-size: 25px;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 10%;
+    text-align: justify;
+}
+.main > p{
+    padding: 1%;
+}
+.footer{
+    text-align: center;
+    padding-bottom: 20%;
+}
+.dark-mode{
+    background-color: black;
+    color: white;
+}
