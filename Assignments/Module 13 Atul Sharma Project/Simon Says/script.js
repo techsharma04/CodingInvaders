@@ -42,8 +42,8 @@ function myTimer() {
 //windows onload function - have to display the leaderboard
 window.addEventListener('DOMContentLoaded', () => {
 
-  const oldRecords = JSON.parse(localStorage.getItem("records"));
-  console.log(localStorage.getItem("records"));
+  const oldRecords = JSON.parse(localStorage.getItem('records'));
+  console.log(localStorage.getItem('records'));
   if (oldRecords) {
     //copy of score history to push new score at last
     leaderBoardRecord = [...oldRecords];
@@ -173,7 +173,7 @@ function failure() {
   leaderBoardObj.finishTime = myTimer();
   leaderBoardObj.record = leaderBoard;
   leaderBoardArray.push(leaderBoardObj);
-  localStorage.setItem("records", JSON.stringify(leaderBoardArray));
+  localStorage.setItem('records', JSON.stringify(leaderBoardArray));
 }
 
 btnRestart.addEventListener("click", () => {

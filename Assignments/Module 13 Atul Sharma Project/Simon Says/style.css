@@ -93,7 +93,13 @@ table{
     border: 2px solid white;
     width: 100%;
 }
-th, td{
+th{
+    width: 33.33%;
+    text-transform: uppercase;
+    color: Yellow;
+    border: 1px solid white;
+}
+td{
     width: 33.33%;
     color: white;
     border: 1px solid white;
