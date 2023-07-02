@@ -47,7 +47,7 @@ h1, h2{
 .btn-shape {
     width: 200px;
     height: 175px;
-    margin: 0.5% 0.2%;
+    margin: 0.4% 0.2%;
     border: 0;
     opacity: 0.5;
 }
@@ -98,11 +98,13 @@ th{
     text-transform: uppercase;
     color: Yellow;
     border: 1px solid white;
+    padding: 5px;
 }
 td{
     width: 33.33%;
     color: white;
     border: 1px solid white;
+    padding: 15px;
 }
 .flashing-buttons{
     -webkit-animation: glowing 1500ms infinite;

@@ -45,9 +45,9 @@ window.addEventListener("DOMContentLoaded", () => {
   console.log(localStorage.getItem("records"));
   if (oldRecords) {
     //copy of score history to push new score at last
-    leaderBoardRecord = [...oldRecords];
+    leaderBoardArray = [...oldRecords];
   }
-  oldRecords.forEach((element) => {
+  oldRecords.slice().reverse().forEach((element) => {
     tr = document.createElement("tr");
     section.appendChild(tr);
     td1 = document.createElement("td");
@@ -64,6 +64,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Event call by clicking play
 btnPlay.addEventListener("click", async () => {
+  btnPlay.disabled = true;
+  btnPlay.classList.add("opacity");
+  btnRestart.classList.remove("opacity");
+  btnPlay.classList.remove("flashing-buttons");
+
   if (timeArray[0] === undefined) {
     tr = document.createElement("tr");
     section.appendChild(tr);
@@ -81,10 +86,7 @@ btnPlay.addEventListener("click", async () => {
     arr.push(randColor);
     await flashing(randColor);
   }
-
-  btnPlay.disabled = true;
-  btnPlay.classList.add("opacity");
-  btnRestart.classList.remove("opacity");
+  
   btnRestart.disabled = false;
 });
 
@@ -169,7 +171,7 @@ function failure() {
   tr.appendChild(td3);
   leaderBoardObj.finishTime = myTimer();
   leaderBoardObj.record = leaderBoard;
-  leaderBoardArray.push(leaderBoardObj);
+  leaderBoardArray.splice(leaderBoardArray.length, 1, leaderBoardObj);
   localStorage.setItem("records", JSON.stringify(leaderBoardArray));
 }
 
