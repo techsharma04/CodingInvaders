@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-box">
+            <input type="text" class="form-control" id="calc-output">
+            <input type="text" class="form-control" id="calc-result" disabled>
+        </div>
+        <div class="btn-container">
+            <button type="button" class="btn" onclick="addValue('7')">7</button>
+            <button type="button" class="btn" onclick="addValue('8')">8</button>
+            <button type="button" class="btn" onclick="addValue('9')">9</button>
+            <button type="button" class="btn" onclick="addValue('+')">+</button>
+
+            <button type="button" class="btn" onclick="addValue('4')">4</button>
+            <button type="button" class="btn" onclick="addValue('5')">5</button>
+            <button type="button" class="btn" onclick="addValue('6')">6</button>
+            <button type="button" class="btn" onclick="addValue('-')">-</button>
+
+            <button type="button" class="btn" onclick="addValue('1')">1</button>
+            <button type="button" class="btn" onclick="addValue('2')">2</button>
+            <button type="button" class="btn" onclick="addValue('3')">3</button>
+            <button type="button" class="btn" onclick="addValue('*')">x</button>
+
+            <button type="button" class="btn" onclick="addValue('%')">%</button>
+
+            <button type="button" class="btn" onclick="addValue('0')">0</button>
+            <button type="button" class="btn" onclick="addValue('.')">.</button>
+            <button type="button" class="btn" onclick="addValue('/')">/</button>
+
+            <button type="button" class="btn btn-clear" onclick="clearDisplay()">C</button>
+            <button type="button" class="btn btn-equal" onclick="calculate()">=</button>
+            <button type="button" class="btn btn-backspace" onclick="backspace()"><</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

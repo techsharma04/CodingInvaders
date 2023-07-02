@@ -40,15 +40,14 @@ function myTimer() {
 }
 
 //windows onload function - have to display the leaderboard
-window.addEventListener('DOMContentLoaded', () => {
-
-  const oldRecords = JSON.parse(localStorage.getItem('records'));
-  console.log(localStorage.getItem('records'));
+window.addEventListener("DOMContentLoaded", () => {
+  const oldRecords = JSON.parse(localStorage.getItem("records"));
+  console.log(localStorage.getItem("records"));
   if (oldRecords) {
     //copy of score history to push new score at last
     leaderBoardRecord = [...oldRecords];
   }
-  oldRecords.forEach(element => {
+  oldRecords.forEach((element) => {
     tr = document.createElement("tr");
     section.appendChild(tr);
     td1 = document.createElement("td");
@@ -114,7 +113,6 @@ function flashing(color) {
   });
 }
 
-
 btnRed.addEventListener("click", () => {
   btnClick.push("red");
   userResult(arr[0], btnClick[0]);
@@ -149,8 +147,7 @@ function success() {
   btnPlay.classList.add("flashing-buttons");
   level += 1;
   levelHeading.innerText = `Level ${level}`;
-  message.innerHTML =
-    `You have won this round.<br>Click on the play button to start next round`;
+  message.innerHTML = `You have won this round.<br>Click on the play button to start next round`;
   leaderBoard += 1;
   btnPlay.disabled = false;
   btnPlay.classList.remove("opacity");
@@ -173,7 +170,7 @@ function failure() {
   leaderBoardObj.finishTime = myTimer();
   leaderBoardObj.record = leaderBoard;
   leaderBoardArray.push(leaderBoardObj);
-  localStorage.setItem('records', JSON.stringify(leaderBoardArray));
+  localStorage.setItem("records", JSON.stringify(leaderBoardArray));
 }
 
 btnRestart.addEventListener("click", () => {
@@ -193,4 +190,3 @@ btnRestart.addEventListener("click", () => {
   btnRestart.disabled = true;
   console.log(level, flashTime, arr);
 });
-
