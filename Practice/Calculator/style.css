@@ -1,25 +1,22 @@
-body{
-    background-color: bac;
+.body{
+    background-color: white;
 }
 .container {
-    padding: 1%;
-    background-color: black;
+    padding: 0.2%;
+    border-radius: 10px;
+    background-color: rgb(255, 247, 247);
 }
-.input-box{
-    padding: 0 0 3px 0;
-}
+
 #calc-output, #calc-result{
     width: 99.85%;
     height: 150px;
-    font-size: 20px;
     border: 0;
-    background-color: black;
-    color: wheat;
+    color: black;
     font-size: 100px;
     text-align: right;
 }
 #calc-output{
-    border-radius: 5px 5px 0 0;
+    border-radius: 25px 25px 0 0;
 }
 #calc-result {
     border-radius: 0 0 5px 5px;
@@ -32,25 +29,42 @@ body{
     flex-wrap: wrap;
 }
 .btn{
-    width: 24.9%;
+    width: 25%;
     height: 170px;
-    margin-bottom: 2px;
-    background-color: black;
-    border-radius: 5px;
-    color: blanchedalmond;
+    background-color: rgb(252, 252, 252);
+    color: black;
     font-size: xx-large;
     cursor: pointer;
 }
 .btn:hover{
-    color: aqua;
-    background-color: grey;
+    color: white;
+    background-color: orange;
 }
-.btn-clear, .btn-equal, .btn-backspace{
-    width: 33.3333%;
+.btn-line1, .btn-line2, .btn-line3{
+    border-width: 0 .1px .1px 0;
+    border-color: white;
 }
+.btn-line4{
+    border-width: 0 0 .1px 0;
+}
+.btn-bottom{
+    border-width: 0 .1px 0 0;
+}
+.btn-equal{
+    width: 50%;
+    background-color: royalblue;
+    color: white;
+    border-radius: 0 0 25px 0;
+}
+.btn-zero{
+    border-radius: 0 0 0 25px;
+}
+
 @media only screen and (max-width: 850px) {
 .btn{
     height: 100px;
 }
-
+#calc-output, #calc-result{
+    height: 180px;
+}
 }
