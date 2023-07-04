@@ -3,8 +3,8 @@ const btnArr = Array.from(btn);
 const text = document.querySelector("#text-span");
 
 btnArr.forEach((element) => {
-    element.addEventListener("mouseover", () => {
-        const eId = element.id;
+    element.addEventListener("mouseover", (event) => {
+        const eId = event.target.id;
         text.innerHTML = `You hovered over ${eId}`;
     })
 })
