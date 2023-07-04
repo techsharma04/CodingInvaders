@@ -20,7 +20,7 @@ function redirect() {
 }
 
 signUp.addEventListener("submit", (action) => {
-    action.preventDefault(); // Prevent from submitting the form on enter
+    action.preventDefault(); // Prevent from submitting the form on enter click
     let dataArray = Array.from(action.target); // Putting all the values in an array
 
     const valName = dataArray[0].value;
@@ -79,6 +79,8 @@ signUp.addEventListener("submit", (action) => {
         cPassError.textContent = "";
         isValid.cpass = "true";
     }
+
+    // Verifying all fields...
     if (isValid.name === "true" && isValid.email === "true" && isValid.pass === "true" && isValid.cpass === "true") {
         redirect();
     }
