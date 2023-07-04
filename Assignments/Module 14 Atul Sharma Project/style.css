@@ -3,95 +3,53 @@ body {
 }
 .container {
   background-color: blanchedalmond;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   width: 70%;
-  height: 700px;
-  margin: 5% 15% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:10% 0 0 15%;
 }
-.form-h3 {
-  font-size: 35px;
-  font-family: elmessiri-semibold;
-  text-align: center;
-  color: #ff9a9c;
+.main{
+    width: 100%;
+    text-align: center;
+}
+img{
+    width: 100%;
 }
 .section {
-  background-color: #eee;
-  width: 30%;
-  padding: 2%;
-  border-radius: 5%;
-}
-.form-items {
-  font-size: 40px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  margin: 0 0 20px 0;
-}
-.form-control {
-  width: 350px;
-  height: 50px;
-  padding: 0 20px;
-  font-size: 20px;
-  border-color: #ccc;
-  color: #ff9a9c;
-  border-radius: 25px;
-}
-.form-button > button {
-  width: 150px;
-  height: 50px;
-  border-radius: 25px;
-  border: 0;
-  background-color: #ff9a9c;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-@media only screen and (max-width: 1440px) {
-  .container {
-    width: 80%;
-  }
-  .section {
-    width: 40%;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .container {
-    background-color: blanchedalmond;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 75%;
-    height: 100%;
-    padding-bottom: 5%;
-    margin: 5% 12.5% 0;
-  }
-  .section {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 850px) {
-  .container {
     width: 100%;
-    height: 100% auto;
-    padding-bottom: 15%;
     text-align: center;
-    margin: 0;
-  }
-  .main > img{
-    width: 75%;
-  }
-  .section {
-    width: 80%;
-  }
-  .form-control {
-    width: 80%;
-    height: 50px;
-    padding: 0 20px;
-    font-size: 20px;
-    border-color: #ccc;
-    color: #ff9a9c;
-    border-radius: 25px;
-  }
+    padding: 5%;
+}
+
+.sign-up{
+    padding: 5% 10%;
+    background-color: #eee;
+}
+.form-items{
+    height: 70px;
+}
+.form-control{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 0 10px ;
+}
+
+.form-button > button{
+    width: 105%;
+    background-color: red;
+    color: white;
+    margin-top: 15px;
+    border: 0;
+    cursor: pointer;
+}
+.form-button > button:hover{
+    width: 105%;
+    background-color: black;
+    color: red;
+}
+.span-error{
+    color: red;
 }
