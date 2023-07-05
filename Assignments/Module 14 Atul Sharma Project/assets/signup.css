@@ -55,3 +55,16 @@ body {
     border-radius: 10px;
     border: 0;
   }
+  @media only screen and (max-width: 885px) {
+    .container{
+      width: 80%;
+      margin: 0;
+      padding: 10%;
+    }
+    .form-control{
+    width: 100%;
+    }
+    h1{
+      font-size: 20px;
+    }
+  }
