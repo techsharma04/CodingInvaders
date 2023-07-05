@@ -1,3 +1,3 @@
 function redirect() {
-    location.href = "../";
+    location.replace("../");
 }
