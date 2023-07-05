@@ -7,38 +7,51 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:10% 0 0 15%;
+  margin:5% 0 0 15%;
+  border-radius: 50px;
 }
 .main{
     width: 100%;
     text-align: center;
 }
 img{
-    width: 100%;
+    width: 30%;
 }
 .section {
     width: 100%;
     text-align: center;
     padding: 5%;
 }
-
 .sign-up{
-    padding: 5% 10%;
+    padding: 2% 10% 5%;
     background-color: #eee;
 }
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.image{
+    text-align: right;
+}
 .form-items{
+    width: 100%;
     height: 70px;
 }
 .form-control{
-    width: 100%;
+    width: 97.8%;
     height: 40px;
     border-radius: 10px;
     border: 1px solid #ccc;
     padding: 0 10px ;
 }
+.form-control:target{
+    border: 1px solid #ccc;
+}
 
 .form-button > button{
-    width: 105%;
+    width: 100%;
     background-color: red;
     color: white;
     margin-top: 15px;

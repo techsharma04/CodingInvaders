@@ -16,7 +16,7 @@ const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/;
 let isValid = {};
 
 function redirect() {
-    location.replace("signup.html")
+    location.href = "assets/signup.html";
 }
 
 signUp.addEventListener("submit", (action) => {
