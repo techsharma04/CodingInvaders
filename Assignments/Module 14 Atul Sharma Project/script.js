@@ -16,7 +16,7 @@ const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/;
 let isValid = {};
 
 function redirect() {
-  location.replace("assets/signup.html");
+     location.replace("assets/signup.html");
 }
 
 signUp.addEventListener("submit", (action) => {
@@ -38,8 +38,8 @@ signUp.addEventListener("submit", (action) => {
   } else {
     nameError.textContent = "";
     isValid.name = "true";
-    document.getElementById("email").focus();
-
+    let focus = document.getElementById("email").focus();
+    
     // Handling email field with Validations
     if (valEmail.length === 0) {
       emailError.textContent = "Email cannot be empty";
