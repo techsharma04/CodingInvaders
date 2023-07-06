@@ -31,6 +31,7 @@ let checkValidation = (dataObj) => {
   let valPass = dataObj.valPass;
   let valCpass = dataObj.valCpass;
   let errorMsg = {};
+  
   // Handling name field with Validations
   if (valName.length === 0) {
     errorMsg.name = "Name cannot be empty";
