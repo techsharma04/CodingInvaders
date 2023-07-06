@@ -9,12 +9,9 @@ const nameRegex = /^[a-zA-Z0-9\s]+$/;
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/;
 
-let isValid = {};
-let errorMsg = {};
 
-// function redirect() {
-    
-//   }
+
+
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
@@ -28,12 +25,12 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-let validation = (dataObj) => {
+let checkValidation = (dataObj) => {
   let valName = dataObj.valName;
   let valEmail = dataObj.valEmail;
   let valPass = dataObj.valPass;
   let valCpass = dataObj.valCpass;
-
+  let errorMsg = {};
   // Handling name field with Validations
   if (valName.length === 0) {
     errorMsg.name = "Name cannot be empty";
@@ -43,7 +40,7 @@ let validation = (dataObj) => {
     errorMsg.name = "Invalid name";
   } else {
     errorMsg.name = "";
-    isValid.name = "true";
+    delete errorMsg.name;
     localStorage.setItem("username", valName);
   }
 
@@ -54,7 +51,7 @@ let validation = (dataObj) => {
     errorMsg.email = "Invalid email";
   } else {
     errorMsg.email = "";
-    isValid.email = "true";
+    delete errorMsg.email;
   }
 
   // Handling password field with Validations
@@ -66,66 +63,50 @@ let validation = (dataObj) => {
     errorMsg.pass = "Invalid password";
   } else {
     errorMsg.pass = "";
-    isValid.pass = "true";
+    delete errorMsg.pass;
   }
 
   // Handling confirm password field with Validations
-  if (valCpass.length === 0) {
-    errorMsg.cpass = "Confirm password cannot be empty";
-  } else if (valCpass.length < 3 || valCpass.length > 10) {
-    errorMsg.cpass = "Confirm password must be between 3 - 10 characters";
-  } else if (passRegex.test(valCpass) === false) {
-    errorMsg.cpass = "Invalid confirm password";
-  } else if (valPass !== valCpass) {
+  if (valPass !== valCpass) {
     errorMsg.pass = "Passwords don't match";
     errorMsg.cpass = "Passwords don't match";
   } else {
     errorMsg.cpass = "";
-    isValid.cpass = "true";
+    delete errorMsg.cpass;
   }
-
-  // if (
-  //   isValid.name === "true" &&
-  //   isValid.email === "true" &&
-  //   isValid.pass === "true" &&
-  //   isValid.cpass === "true"
-  // ) {
-  //   redirect();
-  // }
 
   return errorMsg;
 };
 
-
-signUp.addEventListener("submit", (action) => {
-  action.preventDefault();
-  let dataArray = Array.from(action.target);
+signUp.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let dataArray = Array.from(e.target);
   let dataObj = {
     valName: dataArray[0].value,
     valEmail: dataArray[1].value,
     valPass: dataArray[2].value,
     valCpass: dataArray[3].value,
   };
-  let errors =  validation(dataObj);
+  let errors = checkValidation(dataObj);
   if(Object.keys(errors).length > 0){
-    nameError.textContent = errorMsg.name || "";
-    emailError.textContent = errorMsg.email || "";
-    passError.textContent = errorMsg.pass || "";
-    cPassError.textContent = errorMsg.cpass || "";
+    nameError.textContent = errors.name || "";
+    emailError.textContent = errors.email || "";
+    passError.textContent = errors.pass || "";
+    cPassError.textContent = errors.cpass || "";
 
     signUp.addEventListener("change", (event) => {
-        let index = [...signUp].indexOf(event.target);
-        let errorSpan = document.querySelectorAll(".span-error");
-        errorSpan[index].textContent = "";
+      let index = [...signUp].indexOf(event.target);
+      let errorSpan = document.querySelectorAll(".span-error");
+      errorSpan[index].textContent = "";
     });
-    
-  } else{
+  } else {
+
     nameError.textContent = "";
     emailError.textContent = "";
     passError.textContent = "";
     cPassError.textContent = "";
+
     location.replace("assets/signup.html");
   }
 });
-
 

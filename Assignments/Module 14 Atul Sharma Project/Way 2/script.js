@@ -105,5 +105,11 @@ signUp.addEventListener("submit", (action) => {
     valCpass: dataArray[3].value,
   };
   validation(dataObj);
+  
+  signUp.addEventListener("change", (event) => {
+    let index = [...signUp].indexOf(event.target);
+    let errorSpan = document.querySelectorAll(".span-error");
+    errorSpan[index].textContent = "";
+  })
 });
 
