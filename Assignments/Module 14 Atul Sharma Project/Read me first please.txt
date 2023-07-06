@@ -1,13 +1,20 @@
 I was not fully able to understand about, how the assignment output should be. So I created in both ways according do my understanding.
 
-Way 1: 
+
+Way 1: This is the same approach mentioned in the LMS videos with little changes.
 1. In this when user will press Enter key, the cursor focus will move to next input unless reach to submit button.
 2. Once click the submit button, It'll check the whole form validations.
 3. If there is an error then user has to fix it and proceed accordingly.
 4. When no errors will detect, form will submit and redirects to the success page.
 
 
-Way 2:
+Way 2: 
+1. This approach will work similar like the way 1.
+2. The code is different and I have used different approach for this.
+
+
+
+Way 3:
 1. After pressing the Enter key, the cursor will shift to the next field only, when the selected field is properly validated.
 2. After clear from all errors, the next input field will be focused and so on.
 3. Once the last input field gets clear of errors, form will submit and redirects to the success page.
