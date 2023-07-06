@@ -9,11 +9,12 @@ const nameRegex = /^[a-zA-Z0-9\s]+$/;
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/;
 
-isValid = {};
+let isValid = {};
+let errorMsg = {};
 
-function redirect() {
-    location.replace("assets/signup.html");
-  }
+// function redirect() {
+    
+//   }
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
@@ -35,63 +36,64 @@ let validation = (dataObj) => {
 
   // Handling name field with Validations
   if (valName.length === 0) {
-    nameError.textContent = "Name cannot be empty";
+    errorMsg.name = "Name cannot be empty";
   } else if (valName.length < 3 || valName.length > 20) {
-    nameError.textContent = "Name must be between 3 - 20 characters";
+    errorMsg.name = "Name must be between 3 - 20 characters";
   } else if (nameRegex.test(valName) === false) {
-    nameError.textContent = "Invalid name";
+    errorMsg.name = "Invalid name";
   } else {
-    nameError.textContent = "";
+    errorMsg.name = "";
     isValid.name = "true";
     localStorage.setItem("username", valName);
   }
 
   // Handling email field with Validations
   if (valEmail.length === 0) {
-    emailError.textContent = "Email cannot be empty";
+    errorMsg.email = "Email cannot be empty";
   } else if (emailRegex.test(valEmail) === false) {
-    emailError.textContent = "Invalid email";
+    errorMsg.email = "Invalid email";
   } else {
-    emailError.textContent = "";
+    errorMsg.email = "";
     isValid.email = "true";
   }
 
   // Handling password field with Validations
   if (valPass.length === 0) {
-    passError.textContent = "Password cannot be empty";
+    errorMsg.pass = "Password cannot be empty";
   } else if (valPass.length < 3 || valPass.length > 10) {
-    passError.textContent = "Password must be between 3 - 10 characters";
+    errorMsg.pass = "Password must be between 3 - 10 characters";
   } else if (passRegex.test(valPass) === false) {
-    passError.textContent = "Invalid password";
+    errorMsg.pass = "Invalid password";
   } else {
-    passError.textContent = "";
+    errorMsg.pass = "";
     isValid.pass = "true";
   }
 
   // Handling confirm password field with Validations
   if (valCpass.length === 0) {
-    cPassError.textContent = "Confirm password cannot be empty";
+    errorMsg.cpass = "Confirm password cannot be empty";
   } else if (valCpass.length < 3 || valCpass.length > 10) {
-    cPassError.textContent =
-      "Confirm password must be between 3 - 10 characters";
+    errorMsg.cpass = "Confirm password must be between 3 - 10 characters";
   } else if (passRegex.test(valCpass) === false) {
-    cPassError.textContent = "Invalid confirm password";
+    errorMsg.cpass = "Invalid confirm password";
   } else if (valPass !== valCpass) {
-    passError.textContent = "Passwords don't match";
-    cPassError.textContent = "Passwords don't match";
+    errorMsg.pass = "Passwords don't match";
+    errorMsg.cpass = "Passwords don't match";
   } else {
-    cPassError.textContent = "";
+    errorMsg.cpass = "";
     isValid.cpass = "true";
   }
 
-  if (
-    isValid.name === "true" &&
-    isValid.email === "true" &&
-    isValid.pass === "true" &&
-    isValid.cpass === "true"
-  ) {
-    redirect();
-  }
+  // if (
+  //   isValid.name === "true" &&
+  //   isValid.email === "true" &&
+  //   isValid.pass === "true" &&
+  //   isValid.cpass === "true"
+  // ) {
+  //   redirect();
+  // }
+
+  return errorMsg;
 };
 
 
@@ -104,7 +106,26 @@ signUp.addEventListener("submit", (action) => {
     valPass: dataArray[2].value,
     valCpass: dataArray[3].value,
   };
-  validation(dataObj);
+  let errors =  validation(dataObj);
+  if(Object.keys(errors).length > 0){
+    nameError.textContent = errorMsg.name || "";
+    emailError.textContent = errorMsg.email || "";
+    passError.textContent = errorMsg.pass || "";
+    cPassError.textContent = errorMsg.cpass || "";
+
+    signUp.addEventListener("change", (event) => {
+        let index = [...signUp].indexOf(event.target);
+        let errorSpan = document.querySelectorAll(".span-error");
+        errorSpan[index].textContent = "";
+    });
+    
+  } else{
+    nameError.textContent = "";
+    emailError.textContent = "";
+    passError.textContent = "";
+    cPassError.textContent = "";
+    location.replace("assets/signup.html");
+  }
 });
 
 

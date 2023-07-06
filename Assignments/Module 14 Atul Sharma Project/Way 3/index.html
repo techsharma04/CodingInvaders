@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Module 14</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="section">
+
+            <form class="sign-up" id="sign-up" novalidate>
+                <div class="header">
+                    <div class="h1">
+                        <h1>Sign Up Form</h1>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/images/CodingInvaders_logo_transparent.png">
+                    </div>
+                </div>
+                <div class="form-items">
+                    <input type="text" class="form-control" id="name" placeholder="Name:" autofocus>
+                <span class="span-error" id="name-error"></span>
+                </div>
+                <div class="form-items">
+                    <input type="email" class="form-control" id="email" placeholder="Email:">
+                <span class="span-error" id="email-error"></span>
+                </div>
+                <div class="form-items">
+                    <input type="password" class="form-control" id="password" placeholder="Password:">
+                <span class="span-error" id="pass-error"></span>
+                </div>
+                <div class="form-items">
+                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password:">
+                <span class="span-error" id="cpass-error"></span>
+                </div>
+                <div class="form-items form-button">
+                    <button class="form-control" id="btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
