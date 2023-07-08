@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+h1{
+    font-size: 50px;
+}
+button {
+    width: 100px;
+    height: 100px;
+    color: white;
+    border: 0;
+    border: 2px solid black;
+    cursor: pointer;
+}
+#btn1{
+    border-radius: 100%;
+    background-color: grey;
+}
+#btn2{
+    border-radius: 100%;
+    background-color: blanchedalmond;
+}
+#btn3{
+    border-radius: 100%;
+    background-color: blue;
+}
+#btn4{
+    border-radius: 100%;
+    background-color: yellow;
+}
+#random{
+    width: 250px;
+    background-color: bisque;
+    color: black;
+    border: 0;
+}
