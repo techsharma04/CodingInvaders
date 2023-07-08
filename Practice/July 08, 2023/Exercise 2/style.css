@@ -1,41 +1,39 @@
-body {
-    background-color: chocolate;
-}
 .container {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
-    padding: 50px 0;
-    align-items: center;
 }
 h1{
     font-size: 50px;
 }
-
-#inp-text{
-    width: 500px;
-    height: 40px;
-    text-align: center;
-    margin-top: 100px;
-}
-
-#output{
-    background-color: aquamarine;
-    width: 100px;
-    font-size: 35px;
-    height: 40px;
-    margin-top: 100px;
-}
 button {
-    width: 400px;
+    width: 100px;
     height: 100px;
     color: white;
-    border-radius: 10px;
-    background-color: blue;
     border: 0;
-    font-size: 20px;
+    border: 2px solid black;
     cursor: pointer;
-    margin: 50px 0 0 0;
 }
-
+#btn1{
+    border-radius: 100%;
+    background-color: grey;
+}
+#btn2{
+    border-radius: 100%;
+    background-color: blanchedalmond;
+}
+#btn3{
+    border-radius: 100%;
+    background-color: blue;
+}
+#btn4{
+    border-radius: 100%;
+    background-color: yellow;
+}
+#random{
+    width: 250px;
+    background-color: bisque;
+    color: black;
+    border: 0;
+}
