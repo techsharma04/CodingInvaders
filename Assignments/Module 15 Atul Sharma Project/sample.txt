@@ -1,0 +1,72 @@
+class Orders {
+    constructor(){
+        this.products = [];
+    }
+
+    add(element){
+        return this.items.push(element);
+    }
+
+    remove() {
+        if(this.items.length > 0) {
+            return this.items.pop();
+        }
+        else {
+            console.log("Stack is empty");
+        }
+    }
+
+    top(){
+        return this.items[this.items.length - 1];
+    }
+
+    isEmpty(){
+        return this.items.length === 0;
+    }
+
+    size() {
+        return this.items.length;
+    }
+}
+
+
+let myStack = new Stack();
+
+myStack.add(10);
+myStack.add(20);
+myStack.add(30);
+myStack.add(40);
+
+console.log(myStack.items);
+
+console.log(myStack.remove());
+
+console.log(myStack.items);
+
+console.log(myStack.top());
+
+console.log(myStack.isEmpty());
+
+console.log(myStack.size());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let list = document.createElement("ul");
+    // let li = document.createElement("li");
+    // list.appendChild(li);
+    // li.classList.add("id", "cart-items");
+    // document.querySelector(".cart-container").appendChild(list);
+    //   li.innerText = item;

@@ -1,0 +1,121 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: black;
+}
+.header-top > button {
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    background-color: crimson;
+}
+.cart-container{
+    width: 500px;
+    background-color: black;
+}
+ul{
+    color: white;
+}
+.pro-cart{
+    display: flex;
+}
+.cart-items{
+    color:white;
+    font-size: 20px;
+    padding-left: 25px ;
+}
+.checkout{
+    background-color: black;
+    height: 50px;
+    padding: 10px 10px 0 0;
+    display: flex;
+    justify-content: right;
+}
+#checkout {
+    width: 150px;
+    height: 39.5px;
+    border: 0;
+    font-size: 15px;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    background-color: crimson;
+    cursor: pointer;
+}
+#checkout:hover {
+    background-color: blanchedalmond;
+    color: black;
+}
+#counter{
+    width: 50px;
+    height: 39.2px;
+    font-size: 15px;
+    color: crimson;
+    font-weight: 600;
+    border: 0;
+    background-color: white;
+}
+.count-btn{
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    border: 0;
+    border-radius: 10px 0 0 10px;
+    background-color: crimson;
+}
+
+.product-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2%;
+    gap: 8%;
+    row-gap: 50px;
+}
+.product{
+    border: 10px groove black;
+    text-align: center;
+    width: 200px;
+    padding-bottom: 20px;
+}
+.image-class{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 200px;
+    max-height: 200px;
+}
+.product-image{
+    max-width: 200px;
+    background-color: transparent;
+}
+.product-name{
+    padding: 0 15px;
+    font-size: 20px;
+    color: blue;
+}
+.product-price {
+    font-size: 20px;
+}
+.product-cart-btn{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.product-cart-btn:hover{
+    background-color: red;
+    color: white;
+}
