@@ -1,114 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment15-Q1-Atul Sharma</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="header">
-            <div class="header-top">
-                <button onclick="checkTop()">Top()</button>
-                <button onclick="checkSize()">Check Stack Size()</button>
-            </div>
-            <div class="checkout">
-                <button class="count-btn" disabled>Items in cart: </button>
-                <button id="counter" disabled>0</button>
-                <button id="checkout" onclick="checkEmpty()">Checkout</button>
-            </div>
+      <div id="alert-box">
+          <p><h3>Products in the cart</h3></p>
+          <p><h4 id="alert-boxp"></h4></p>
+          <button id="alert-box-btn" onclick="vanishAlertBox()">OK</button>
+      </div>
+      <div class="header">
+        <div class="header-top">
+          <button onclick="checkTop()">Top()</button>
+          <button onclick="checkSize()">Stack Size()</button>
         </div>
-        <div class="pro-cart">
-            <div class="product-container">
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/xbox_series_x.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro1">Xbox Series X Console</p>
-                    <p class="product-price">$ 599.96</p>
-                    <button class="product-cart-btn" id="pro1">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/nintendo.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro2">Nintendo Switch Console</p>
-                    <p class="product-price">$ 384.94</p>
-                    <button class="product-cart-btn" id="pro2">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/xbox_series_s.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro3">Xbox Series S Console</p>
-                    <p class="product-price">$ 319.99</p>
-                    <button class="product-cart-btn" id="pro3">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/playstation_5.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro4">Playstation 5 Console</p>
-                    <p class="product-price">$ 599.96</p>
-                    <button class="product-cart-btn" id="pro4">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/nintendo_small.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro5">Nintendo Switch Lite</p>
-                    <p class="product-price">$ 125.99</p>
-                    <button class="product-cart-btn" id="pro5">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/xbox_controller.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro6">Xbox Series X & S Controller</p>
-                    <p class="product-price">$ 74.99</p>
-                    <button class="product-cart-btn" id="pro6">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/nintendo_controller.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro7">Nintendo Switch Controller</p>
-                    <p class="product-price">$ 59.99</p>
-                    <button class="product-cart-btn" id="pro7">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/playstation_5_cover.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro8">Playstation 5 Cover Plates</p>
-                    <p class="product-price">$ 599.96</p>
-                    <button class="product-cart-btn" id="pro8">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/playstation_5_controller.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro9">Play Station 5 Controller</p>
-                    <p class="product-price">$ 599.96</p>
-                    <button class="product-cart-btn" id="pro9">Add to Cart</button>
-                </div>
-                <div class="product">
-                    <div class="image-class">
-                        <img src="./images/nintendo_screen_guard.jpg" class="product-image" alt="product-image" />
-                    </div>
-                    <p class="product-name pro10">Nintendo Lite Screen Guard</p>
-                    <p class="product-price">$ 12.99</p>
-                    <button class="product-cart-btn" id="pro10">Add to Cart</button>
-                </div>
-            </div>
-            <div id="cart">
-            </div>
+        <div>
+          <h1 id="top-msg">Every operational output is also be running in console. </h1>
         </div>
+        <div class="checkout">
+          <button class="count-btn" disabled>Items in cart:</button>
+          <button id="counter" disabled>0</button>
+          <button id="checkout" onclick="removeAll()">Checkout</button>
+        </div>
+      </div>
+      <div class="pro-cart">
+        <div class="product-container">
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/xbox_series_x.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro1">Xbox Series X Console</p>
+            <p class="product-price">$ 599.96</p>
+            <button class="product-cart-btn" id="pro1">Add to Cart</button>
+          </div>
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/nintendo.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro2">Nintendo Switch Console</p>
+            <p class="product-price">$ 384.94</p>
+            <button class="product-cart-btn" id="pro2">Add to Cart</button>
+          </div>
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/xbox_series_s.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro3">Xbox Series S Console</p>
+            <p class="product-price">$ 319.99</p>
+            <button class="product-cart-btn" id="pro3">Add to Cart</button>
+          </div>
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/playstation_5.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro4">Playstation 5 Console</p>
+            <p class="product-price">$ 599.96</p>
+            <button class="product-cart-btn" id="pro4">Add to Cart</button>
+          </div>
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/nintendo_small.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro5">Nintendo Switch Lite</p>
+            <p class="product-price">$ 125.99</p>
+            <button class="product-cart-btn" id="pro5">Add to Cart</button>
+          </div>
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/xbox_controller.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro6">Xbox Series Controller</p>
+            <p class="product-price">$ 74.99</p>
+            <button class="product-cart-btn" id="pro6">Add to Cart</button>
+          </div>
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/nintendo_controller.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro7">Nintendo Switch Controller</p>
+            <p class="product-price">$ 59.99</p>
+            <button class="product-cart-btn" id="pro7">Add to Cart</button>
+          </div>
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/playstation_5_cover.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro8">Playstation 5 Cover Plates</p>
+            <p class="product-price">$ 599.96</p>
+            <button class="product-cart-btn" id="pro8">Add to Cart</button>
+          </div>
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/playstation_5_controller.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro9">Play Station 5 Controller</p>
+            <p class="product-price">$ 599.96</p>
+            <button class="product-cart-btn" id="pro9">Add to Cart</button>
+          </div>
+          <div class="product">
+            <div class="image-class">
+              <img
+                src="./images/nintendo_screen_guard.jpg"
+                class="product-image"
+                alt="product-image"
+              />
+            </div>
+            <p class="product-name pro10">Nintendo Lite Screen Guard</p>
+            <p class="product-price">$ 12.99</p>
+            <button class="product-cart-btn" id="pro10">Add to Cart</button>
+          </div>
+        </div>
+        <div id="cart">
+          <h3 id="cart-text">Checkout Tab</h3>
+        </div>
+      </div>
     </div>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>

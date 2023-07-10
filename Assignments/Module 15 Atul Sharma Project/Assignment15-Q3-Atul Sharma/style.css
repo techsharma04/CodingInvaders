@@ -1,0 +1,58 @@
+.container {
+    background-color: white;
+    width: 49%;
+    min-height: 200px;
+    border: 8px groove grey;
+    color: crimson;
+    position: fixed;
+    margin: 2% 0 0 25%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.c-box {
+    width: 100%;
+    text-align: center;
+}
+.labels{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+.cast-label{
+    width: 12%;
+    height: 40px;
+    background-color: crimson;
+    border: 5px groove #ccc;
+    border-right: 0;
+    color: white;
+    border-radius: 25px 0 0 25px;
+    padding: 0 15px;
+    font-size: 20px;
+}
+.cast-input{
+    width: 80%;
+    height: 40px;
+    border-radius: 0 25px 25px 0;
+    border: 5px groove #ccc;
+    
+    border-left: 0;
+    padding: 0 15px;
+    font-size: 20px;
+}
+#cast-btn{
+    width: 30%;
+    height: 40px;
+    background-color: black;
+    border: 5px groove grey;
+    color: white;
+    float: right;
+    cursor: pointer;
+}
+#cast-btn:hover{
+    border: 5px groove white;
+
+}

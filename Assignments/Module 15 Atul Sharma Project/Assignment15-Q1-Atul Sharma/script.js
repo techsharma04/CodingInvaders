@@ -1,4 +1,5 @@
 const cartButtons = document.querySelectorAll(".product-cart-btn");
+const alertBox = document.getElementById("alert-box");
 const btnArray = Array.from(cartButtons);
 
 class Orders {
@@ -8,62 +9,83 @@ class Orders {
 
   add(element) {
     return this.products.push(element);
-    
+
   }
 
   top() {
     if (this.products.length > 0) {
-      alert(this.products[this.products.length - 1]);
+      return `"${this.products[this.products.length - 1]}" is at the top of the stack`;
+
     } else {
-      alert("stack is empty");
+      return `Oooppssss...! You've got nothing. \n Stack is empty`;
     }
   }
 
   remove() {
+    document.getElementById("cart").classList.add("cart-container");
+    let unorderedList = document.createElement("ul");
+    document.querySelector(".cart-container").appendChild(unorderedList);
+    let removedProducts = [];
 
-    for (let i = this.products.length; i > 0; i--) {
-      document.getElementById("counter").innerText = myStack.products.length - 1;
-      this.products.pop();
-    }
-    // document.getElementById("cart").classList.add("cart-container");
-    // let list = document.createElement("ul");
-    // document.querySelector(".cart-container").appendChild(list);
-    // let li = document.createElement("li");
-    // list.appendChild(li);
-    // li.classList.add("id", "cart-items");
-    // li.innerText = item;
+    Object.keys(this.products).reverse().forEach((index) => {
+      // console.log(this.products[index]);
+      let list = document.createElement("li");
+      unorderedList.appendChild(list);
+      list.classList.add("id", "cart-items");
+      list.innerText = this.products[index];
+      document.getElementById("counter").innerText = this.products.length - 1;
+      removedProducts.push(this.products.pop());
+    });
+    return removedProducts;
   }
+
+
   size() {
-    alert(this.products.length);
-}
+    return this.products.length - 1;
+  }
 }
 
 
 
 let myStack = new Orders();
 
-for (let btn of btnArray) {
-  btn.addEventListener("click", () => {
-    let item = btn.getAttribute("id");
-    let prod = document.getElementsByClassName(item);
-    for (let p of prod) {
-      item = p.innerHTML;
-      myStack.add(item);
-    }
-    document.getElementById("counter").innerText = myStack.products.length;
-  });
-}
 
+  for (let btn of btnArray) {
+    btn.addEventListener("click", () => {
+      let item = btn.getAttribute("id");
+      let prod = document.getElementsByClassName(item);
+      for (let p of prod) {
+        item = p.innerHTML;
+        myStack.add(item);
+        alertBox.style.visibility = "visible";
+        document.getElementById("alert-boxp").textContent = myStack.products;
+        console.log("Added Products: " + myStack.products);
+      }
+      document.getElementById("counter").innerText = myStack.products.length;
+    });
+  }
+
+
+function vanishAlertBox() {
+  alertBox.style.visibility = "hidden";
+}
 function checkTop() {
-  myStack.top();
+  alertBox.style.visibility = "visible";
+  document.getElementById("alert-boxp").innerText = `${myStack.top()}`;
+  console.log(myStack.top());
 }
 
-function checkEmpty() {
-  myStack.remove();
+function removeAll() {
+  let dispayRemoved = myStack.remove();
+  alertBox.style.visibility = "visible";
+  document.getElementById("alert-boxp").innerText = `${dispayRemoved} \n\n Above products have been removed from the cart. \n and displaying in the checkout tab on the right side`;
+  console.log(dispayRemoved);
 }
 
 function checkSize() {
-    myStack.size();
+  alertBox.style.visibility = "visible";
+  document.getElementById("alert-boxp").innerText = `Index of the array starts from 0, So (length - 1) is applied here to get the exact size. \n \n Size of the array is ${myStack.size()}`;
+  console.log(`Index of the array starts from 0, So (length - 1) is applied here to get the exact size. \n \n Size of the array is ${myStack.size()}`);
 }
 
 

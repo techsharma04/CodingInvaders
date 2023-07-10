@@ -2,21 +2,54 @@
     display: flex;
     flex-direction: column;
 }
+#alert-box {
+    background-color: white;
+    width: 30%;
+    min-height: 150px;
+    border: 8px groove grey;
+    color: crimson;
+    position: fixed;
+    margin:2% 0 0 35%;
+    padding: 1%;
+    text-align: center;
+    visibility: hidden;
+}
+#alert-boxp {
+    color: black;
+    text-align: left;
+}
+#alert-box-btn{
+    width: 70px;
+    border: 0;
+    background-color: crimson;
+    cursor: pointer;
+    color: white;
+    height: 40px;
+}
+#alert-box-btn:hover {
+    background-color: black;
+
+}
 .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     background-color: black;
+    
 }
 .header-top > button {
     width: 200px;
     height: 40px;
     font-size: 15px;
     color: white;
+    cursor: pointer;
     border: 0;
     border-radius: 10px;
     background-color: crimson;
+}
+#top-msg{
+    color: white;
 }
 .cart-container{
     width: 500px;
@@ -28,10 +61,19 @@ ul{
 .pro-cart{
     display: flex;
 }
+#cart {
+    border-top: 10px solid white;
+    color:white;
+    text-transform: uppercase;
+}
+#cart-text{
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-align: center;
+}
 .cart-items{
     color:white;
-    font-size: 20px;
-    padding-left: 25px ;
+    font-size: 15px;
 }
 .checkout{
     background-color: black;
@@ -50,10 +92,7 @@ ul{
     background-color: crimson;
     cursor: pointer;
 }
-#checkout:hover {
-    background-color: blanchedalmond;
-    color: black;
-}
+
 #counter{
     width: 50px;
     height: 39.2px;
@@ -116,6 +155,6 @@ ul{
     cursor: pointer;
 }
 .product-cart-btn:hover{
-    background-color: red;
+    background-color: crimson;
     color: white;
 }

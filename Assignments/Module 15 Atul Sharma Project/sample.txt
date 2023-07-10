@@ -1,22 +1,26 @@
-class Orders {
+class Queue {
     constructor(){
-        this.products = [];
+        this.items = [];
     }
 
-    add(element){
+    enqueu(element){
         return this.items.push(element);
     }
 
-    remove() {
+    dequeue() {
         if(this.items.length > 0) {
-            return this.items.pop();
+            return this.items.shift();
         }
         else {
             console.log("Stack is empty");
         }
     }
 
-    top(){
+    front(){
+        return this.items[0];
+    }
+
+     rear(){
         return this.items[this.items.length - 1];
     }
 

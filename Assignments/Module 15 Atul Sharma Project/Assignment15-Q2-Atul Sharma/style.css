@@ -1,0 +1,56 @@
+#alert-box {
+    background-color: white;
+    width: 30%;
+    min-height: 200px;
+    border: 8px groove grey;
+    color: crimson;
+    position: fixed;
+    margin: 2% 0 0 35%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.abox {
+    width: 100%;
+    text-align: center;
+
+}
+.castMember {
+    display: flex;
+    justify-content: center;
+}
+#castInput{
+    width: 80%;
+    height: 40px;
+    border: 1px groove grey;
+    padding: 0 15px;
+    font-size: 20px;
+    border-radius: 10px 0 0 10px;
+}
+#alert-box-btn{
+    width: 20%;
+    border: 1px groove grey;    
+    border-radius: 0 10px 10px 0;
+    background-color: crimson;
+    cursor: pointer;
+    color: white;
+    float: right;
+}
+#alert-box-btn:hover {
+    background-color: black;
+
+}
+#cast-btn{
+    width: 100%;
+    height: 25px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    visibility: hidden;
+}
+#cast-btn:hover{
+    background-color: crimson;
+    border: 0;
+}
