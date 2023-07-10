@@ -1,4 +1,4 @@
-.container {
+.container, .second-container {
     background-color: white;
     width: 49%;
     min-height: 200px;
@@ -12,6 +12,9 @@
     align-items: center;
     justify-content: space-between;
 }
+.second-container {
+    margin-top: 30%;
+}
 .c-box {
     width: 100%;
     text-align: center;
@@ -23,7 +26,7 @@
     margin: 15px 0;
 }
 .cast-label{
-    width: 12%;
+    width: 15%;
     height: 40px;
     background-color: crimson;
     border: 5px groove #ccc;
@@ -38,7 +41,6 @@
     height: 40px;
     border-radius: 0 25px 25px 0;
     border: 5px groove #ccc;
-    
     border-left: 0;
     padding: 0 15px;
     font-size: 20px;
@@ -55,4 +57,41 @@
 #cast-btn:hover{
     border: 5px groove white;
 
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.search-input, .search-btn{
+    height: 40px;
+    padding: 0 15px;
+    font-size: 15px;
+    border: 5px groove #ccc;
+}
+.search-input{
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+}
+.search-btn{
+    width: 15%;
+    border-radius: 0 5px 5px 0;
+    height: 50px;
+    cursor: pointer;
+    background-color: crimson;
+    color: white;
+}
+.search-btn:hover{
+    border: 5px groove grey;
+}
+
+table{
+    float: right;
+    width: 80%;
+    text-align: left;
+    color: black;
+}
+td{
+    color: crimson;
 }
