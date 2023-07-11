@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment15-Q4-Atul Sharma</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="container">
+     <div id="alert-box">
+          <p><h1>Transaction Queue</h1></p>
+          <table class="table">
+            <thead class="thead">
+              <tr>
+                <th>Item Count</th>
+                <th>Array Index</th>
+                <th>Purchased Items</th>
+                <th>Debit Amount</th>
+                <th>Balance Amount</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+          <button id="alert-box-btn" onclick="vanishAlertBox()">Close</button>
+      </div>
+    <div class="header">
+      <div class="header-top">
+        <h2 id="top-left-msg">Credit Card Statement </h2>
+      </div>
+      <div>
+        <h2 id="top-msg">Every operational output is also be running in console. </h2>
+      </div>
+      <div class="checkout">
+        <button id="count-btn" onclick="balanceCheck()">Check Available Balance</button>
+        <button id="counter" onclick="transactionsCheck()">View Transactions</button>
+      </div>
+    </div>
+    <div class="pro-cart">
+      <div class="product-container">
+        <div class="product">
+
+          <p class="product-name pro1">Xbox Series X Console</p>
+          <p class="product-price">&#8377; 599.96</p>
+          <button class="product-cart-btn" id="pro1" onclick="purchase('Xbox Series X Console', 599.96)">Purchase</button>
+        </div>
+        <div class="product">
+
+          <p class="product-name pro2">Nintendo Switch Console</p>
+          <p class="product-price">&#8377; 384.94</p>
+          <button class="product-cart-btn" id="pro2" onclick="purchase('Nintendo Switch Console', 384.94)">Purchase</button>
+        </div>
+        <div class="product">
+
+          <p class="product-name pro3">Xbox Series S Console</p>
+          <p class="product-price">&#8377; 319.99</p>
+          <button class="product-cart-btn" id="pro3" onclick="purchase('Xbox Series S Console', 319.99)">Purchase</button>
+        </div>
+        <div class="product">
+
+          <p class="product-name pro4">Playstation 5 Console</p>
+          <p class="product-price">&#8377; 749.99</p>
+          <button class="product-cart-btn" id="pro4" onclick="purchase('Playstation 5 Console', 749.99)">Purchase</button>
+        </div>
+        <div class="product">
+
+          <p class="product-name pro5">Nintendo Switch Lite</p>
+          <p class="product-price">&#8377; 125.99</p>
+          <button class="product-cart-btn" id="pro5" onclick="purchase('Nintendo Switch Lite', 125.99)">Purchase</button>
+        </div>
+        <div class="product">
+
+          <p class="product-name pro6">Xbox Series Controller</p>
+          <p class="product-price">&#8377; 74.99</p>
+          <button class="product-cart-btn" id="pro6" onclick="purchase('Xbox Series Controller', 74.99)">Purchase</button>
+        </div>
+        <div class="product">
+
+          <p class="product-name pro7">Nintendo Switch Controller</p>
+          <p class="product-price">&#8377; 59.99</p>
+          <button class="product-cart-btn" id="pro7" onclick="purchase('Nintendo Switch Controller', 59.99)">Purchase</button>
+        </div>
+        <div class="product">
+
+          <p class="product-name pro8">Playstation 5 Cover Plates</p>
+          <p class="product-price">&#8377; 1000</p>
+          <button class="product-cart-btn" id="pro8" onclick="purchase('Playstation 5 Cover Plates', 1000)">Purchase</button>
+        </div>
+        <div class="product">
+
+          <p class="product-name pro9">Play Station 5 Controller</p>
+          <p class="product-price">&#8377; 599.96</p>
+          <button class="product-cart-btn" id="pro9" onclick="purchase('Play Station 5 Controller', 599.96)">Purchase</button>
+        </div>
+        <div class="product">
+
+          <p class="product-name pro10">Nintendo Lite Screen Guard</p>
+          <p class="product-price">&#8377; 12.99</p>
+          <button class="product-cart-btn" id="pro10" onclick="purchase('Nintendo Lite Screen Guard', 12.99)">Purchase</button>
+        </div>
+      </div>
+      <div id="cart">
+        <h3 id="cart-text">Checkout Tab</h3>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

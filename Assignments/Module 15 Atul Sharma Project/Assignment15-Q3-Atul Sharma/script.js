@@ -50,11 +50,15 @@ bookBtn.addEventListener("click", () => {
     toCity: toCity.value,
   };
   busBooking.enqueue(ticketDetails);
+  name.value = "";
+  toCity.value = "";
+  fromCity.value = "";
+  alert("Ticket Id: "+ ticketID);
   console.log(busBooking.items);
 });
 
 function searchUser(element) {
-  busBooking.items.find((value, index) => {
+  busBooking.items.find((_, index) => {
     let id = busBooking.items[index].ticketID;
     if(element === id){
       console.log(busBooking.items[index].userDetails);

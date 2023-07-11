@@ -73,11 +73,13 @@
 .search-input{
     width: 80%;
     border-radius: 5px 0 0 5px;
+    border-right: 0;
 }
 .search-btn{
     width: 15%;
     border-radius: 0 5px 5px 0;
     height: 50px;
+    border-left: 0;
     cursor: pointer;
     background-color: crimson;
     color: white;

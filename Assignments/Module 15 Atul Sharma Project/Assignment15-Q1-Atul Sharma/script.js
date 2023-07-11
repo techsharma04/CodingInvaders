@@ -88,4 +88,3 @@ function checkSize() {
   console.log(`Index of the array starts from 0, So (length - 1) is applied here to get the exact size. \n \n Size of the array is ${myStack.size()}`);
 }
 
-

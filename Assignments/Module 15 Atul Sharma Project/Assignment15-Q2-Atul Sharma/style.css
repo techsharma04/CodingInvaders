@@ -14,6 +14,7 @@
 }
 .abox {
     width: 100%;
+    margin-top: 10px;
     text-align: center;
 
 }
@@ -43,14 +44,43 @@
 
 }
 #cast-btn{
-    width: 100%;
-    height: 25px;
+    width: 100px;
+    height: 100px;
     background-color: black;
     color: white;
+    border-radius: 50px;
     cursor: pointer;
     visibility: hidden;
 }
 #cast-btn:hover{
     background-color: crimson;
     border: 0;
+}
+.output-div{
+    width: 100%;
+}
+#output {
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+}
+#output-body{
+    width: 100%;
+}
+tr{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+td{
+    color: black;
+    width: 50%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 850px) {
+#alert-box{
+    width: 91%;
+    margin: 5% 0;
+}
 }
