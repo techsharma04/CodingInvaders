@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment15-Q5-Atul Sharma</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="body">
+  <div class="container">
+    <div class="c-box">
+      <h1>Score Analysis Project</h1>
+    </div>
+    <div class="c-box">
+      <div class="labels">
+        <input type="text" class="player-label" id="label-name" value="Player Name:" disabled /><input type="text"
+          class="player-input" id="player-name" value="" />
+      </div>
+      <div class="labels">
+        <input type="text" class="player-label" id="label-from-city" value="Score:" disabled /><input type="text"
+          class="player-input" id="player-score" value="" />
+      </div>
+      <div class="labels">
+        <input type="text" class="player-label" id="label-to-city" value="Unique Id:" disabled /><input type="text"
+          class="player-input" id="player-unique-id" value="" />
+      </div>
+      <div class="msg-box">
+        <button class="score-btn" id="score-btn">Save</button>
+        <span id="msg"></span>
+      </div>  
+    </div>
+    
+  </div>
+  <div class="second-container">
+    <div class="c-box">
+      <h1>Search Player Details</h1>
+    </div>
+      <div class="c-box">
+        <div class="labels">
+        <input type="text" class="player-input" id="search-player"
+          placeholder="Enter player's name here to search..." />
+          <button class="search-btn" id="search-btn" onclick="searchPlayerScore()">Search
+          </button>
+      </div>
+      
+      </div>
+
+    <div class="c-box">
+      <div class="output-box" id="output-name"></div>
+      <div class="output-box" id="output-score"></div>
+      <div class="output-box" id="output-uid"></div>
+    </div>
+  </div>
+</div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

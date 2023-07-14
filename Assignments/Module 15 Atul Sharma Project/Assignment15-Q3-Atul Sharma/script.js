@@ -1,7 +1,7 @@
 const name = document.querySelector("#cast-input-name");
 const fromCity = document.querySelector("#cast-input-from-city");
 const toCity = document.querySelector("#cast-input-to-city");
-const bookBtn = document.querySelector("#cast-btn");
+const bookBtn = document.querySelector("#book-btn");
 const searchBtn = document.querySelector("#search-btn");
 
 class Booking {
@@ -13,29 +13,6 @@ class Booking {
     return this.items.push(element);
   }
 
-  dequeue() {
-    if (this.items.length > 0) {
-      return this.items.shift();
-    } else {
-      console.log("Stack is empty");
-    }
-  }
-
-  front() {
-    return this.items[0];
-  }
-
-  rear() {
-    return this.items[this.items.length - 1];
-  }
-
-  isEmpty() {
-    return this.items.length === 0;
-  }
-
-  size() {
-    return this.items.length;
-  }
 }
 
 let busBooking = new Booking();

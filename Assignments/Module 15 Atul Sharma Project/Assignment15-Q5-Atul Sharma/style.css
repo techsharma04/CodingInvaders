@@ -7,6 +7,7 @@ body{
     height: 100vh;
     position: absolute;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     padding: 0 1%;
@@ -20,7 +21,7 @@ body{
     align-items: center;
 }
 h1{
-    color: crimson;
+    color: rgb(98, 98, 255);
 }
 .c-box{
     display: flex;
@@ -40,48 +41,32 @@ h1{
     height: 40px;
     padding: 0 20px;
     font-size: 15px;
-    border: 5px groove #ccc;
+    border-radius: 0;
 }
 .player-label{
     width: 15%;
     color: white;
-    background-color: crimson;
-    border-radius: 25px 0 0 25px;
-    border-right: 0;
-}
-.player-input{
-    border-left: 0;
-    border-radius: 0 25px 25px 0;
+    border-color: transparent;
+    background-color: rgb(98, 98, 255);
 }
 .score-btn, .search-btn{
-    width: 30%;
+    width: 10%;
     height: 40px;
     color: white;
-    background-color: crimson;
-    border: 5px groove #ccc;
+    background-color: rgb(98, 98, 255);
+    border: 0;
     cursor: pointer;
 }
 .score-btn:hover{
     border: 1px;
-    border: 5px groove grey;
-}
-.search-input{
-    width: 100%;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 15px;
-    border: 5px groove #ccc;
-    border-radius: 25px 0 0 25px;
-    border-right: 0;
+    border: 2px groove #ccc;
 }
 .search-btn {
-    width: 10%;
-    border-left: 0;
-    height: 50px;
-    border-radius: 0 25px 25px 0;
+    border-radius: 0;
+    height: 44px;
 }
 .search-btn:hover{
-    border: 5px groove grey;
+    border: 2px groove #ccc;
 }
 
 .output-box {
@@ -109,23 +94,8 @@ h1{
     color: crimson;
     font-size: 20px;
 }
-#output{
-    width: 50%;
-    text-align: center;
-}
-table{
-    width: 100%;
-    text-align: left;
-    color: black;
-}
-td{
-    color: crimson;
-}
 
 @media only screen and (max-width: 1024px) {
-    .body{
-    flex-direction: column;
-    }
     h1{
         font-size: 25px;
     }
@@ -146,7 +116,7 @@ td{
     .player-label {
         width: 25%;
     }
-    #output{
-        width: 80%;
+    .output-box{
+        width: 100%;
     }
 }
