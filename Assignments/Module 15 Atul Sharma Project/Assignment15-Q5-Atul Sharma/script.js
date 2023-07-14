@@ -37,9 +37,9 @@ class HashTable {
   }
 
   setPlayer(playerNameValue, playerScoreValue, playerUniqueIdValue) {
-    // playerName.value ="";
-    // playerScore.value = "";
-    // playerUniqueId.value = "";
+    playerName.value ="";
+    playerScore.value = "";
+    playerUniqueId.value = "";
 
     const hashIndex = this._hash(playerNameValue);
     if (this.table[hashIndex]) {
