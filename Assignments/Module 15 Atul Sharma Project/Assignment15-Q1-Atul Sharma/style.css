@@ -1,6 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 #alert-box {
     background-color: white;
@@ -34,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 2%;
     background-color: black; 
 }
 .header-top > button {

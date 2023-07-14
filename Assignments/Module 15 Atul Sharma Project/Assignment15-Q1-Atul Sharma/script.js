@@ -50,20 +50,20 @@ class Orders {
 let myStack = new Orders();
 
 
-  for (let btn of btnArray) {
-    btn.addEventListener("click", () => {
-      let item = btn.getAttribute("id");
-      let prod = document.getElementsByClassName(item);
-      for (let p of prod) {
-        item = p.innerHTML;
-        myStack.add(item);
-        alertBox.style.visibility = "visible";
-        document.getElementById("alert-boxp").textContent = myStack.products;
-        console.log("Added Products: " + myStack.products);
-      }
-      document.getElementById("counter").innerText = myStack.products.length;
-    });
-  }
+btnArray.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let item = btn.getAttribute("id");
+    let prod = document.getElementsByClassName(item);
+    for (let p of prod) {
+      item = p.innerHTML;
+      myStack.add(item);
+      alertBox.style.visibility = "visible";
+      document.getElementById("alert-boxp").textContent = myStack.products;
+      console.log("Added Products: " + document.getElementById("alert-boxp").textContent);
+    }
+    document.getElementById("counter").innerText = myStack.products.length;
+  });
+})
 
 
 function vanishAlertBox() {
