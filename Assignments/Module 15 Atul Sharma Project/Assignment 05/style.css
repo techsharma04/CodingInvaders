@@ -1,0 +1,116 @@
+.container, .second-container {
+    background-color: white;
+    width: 96%;
+    min-height: 200px;
+    border: 8px groove #ccc;
+    color: rgb(98, 98, 255);
+    position: fixed;
+    /* margin: 2% 0 0 25%; */
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.second-container {
+    margin-top: 30%;
+}
+.c-box {
+    width: 100%;
+    text-align: center;
+}
+.labels{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+.cast-label{
+    width: 15%;
+    height: 40px;
+    background-color: rgb(98, 98, 255);;
+    border: 5px groove #ccc;
+    border-right: 0;
+    color: white;
+    /* border-radius: 25px 0 0 25px; */
+    padding: 0 15px;
+    font-size: 20px;
+}
+.cast-input{
+    width: 80%;
+    height: 40px;
+    /* border-radius: 0 25px 25px 0; */
+    border: 5px groove #ccc;
+    border-left: 0;
+    padding: 0 15px;
+    font-size: 20px;
+}
+#score-btn{
+    width: 20%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.534);
+    border: 5px groove rgba(0, 0, 0, 0.534);;
+    color: white;
+    float: right;
+    cursor: pointer;
+}
+#cast-btn:hover{
+    border: 5px groove white;
+
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.search-input, .search-btn{
+    height: 40px;
+    padding: 0 15px;
+    font-size: 15px;
+    border: 5px groove #ccc;
+}
+.search-input{
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+    border-right: 0;
+}
+.search-btn{
+    width: 15%;
+    border-radius: 0 5px 5px 0;
+    height: 50px;
+    border-left: 0;
+    cursor: pointer;
+    background-color: rgb(98, 98, 255);;
+    color: white;
+}
+.search-btn:hover{
+    color: black;
+}
+
+table{
+    float: right;
+    width: 80%;
+    text-align: left;
+    color: black;
+}
+td{
+    color: rgb(98, 98, 255);;
+}
+.output-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.output-box > div{
+    width: 25%;
+    text-align: left;
+    padding: 0.7%;
+}
+@media only screen and (max-width: 1024px) {
+    .second-container {
+        margin-top: 40%;
+    }
+}
