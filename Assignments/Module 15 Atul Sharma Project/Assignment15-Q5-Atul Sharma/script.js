@@ -46,27 +46,27 @@ class HashTable {
       for (let items of this.table[hashIndex]) {
         if (items[0] === playerNameValue && items[2] === playerUniqueIdValue) {
           items[1] += playerScoreValue;
-          msg.innerHTML = `Player score at index ${hashIndex} is updated.  <b>Name:</b> ${playerNameValue},  <b>Score:</b> ${items[1]},  <b>Unique Id:</b> ${playerUniqueIdValue}`;
+          msg.innerHTML = `Player score at index ${hashIndex} with Unique id ${playerUniqueIdValue} is updated. New score is ${items[1]}`;
           setTimeout(() => {
             msg.innerHTML = "";
-          }, 5000);
-          return `Player score at index ${hashIndex} is updated.  <b>Name:</b> ${playerNameValue},  <b>Score:</b> ${items[1]},  <b>Unique Id:</b> ${playerUniqueIdValue}`;
+          }, 3500);
+          return msg.innerHTML;
         }
       }
       this.table[hashIndex].push([playerNameValue, playerScoreValue, playerUniqueIdValue]);
       msg.innerHTML = `Different player with the same name is added at index ${hashIndex}.  <b>Name:</b> ${playerNameValue},  <b>Score:</b> ${playerScoreValue},  <b>Unique Id:</b> ${playerUniqueIdValue}`;
       setTimeout(() => {
         msg.innerHTML = "";
-      }, 5000);
-      return `Different player with the same name is added at index ${hashIndex}.  <b>Name:</b> ${playerNameValue},  <b>Score:</b> ${playerScoreValue},  <b>Unique Id:</b> ${playerUniqueIdValue}`;
+      }, 3500);
+      return msg.innerHTML;
     } else {
       this.table[hashIndex] = [];
       this.table[hashIndex].push([playerNameValue, playerScoreValue, playerUniqueIdValue]);
       msg.innerHTML = `Player Details are added at index ${hashIndex}.  <b>Name:</b> ${playerNameValue},  <b>Score:</b> ${playerScoreValue}, <b>Unique Id:</b> ${playerUniqueIdValue}`;
       setTimeout(() => {
         msg.innerHTML = "";
-      }, 5000);
-      return `Player Details are added at index ${hashIndex}.  <b>Name:</b> ${playerNameValue},  <b>Score:</b> ${playerScoreValue},  <b>Unique Id:</b> ${playerUniqueIdValue}`;
+      }, 3500);
+      return msg.innerHTML;
     }
   }
 
