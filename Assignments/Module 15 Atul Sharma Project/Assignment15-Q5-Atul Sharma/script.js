@@ -4,7 +4,6 @@ let playerUniqueId = document.getElementById("player-unique-id");
 let searchPlayer = document.getElementById("search-player");
 let outputName = document.getElementById("output-name");
 let outputScore = document.getElementById("output-score");
-let outputUid = document.getElementById("output-uid");
 let msg = document.getElementById("msg");
 let scoreBtn = document.getElementById("score-btn");
 
@@ -13,14 +12,10 @@ let div1 = document.createElement("div");
 let div2 = document.createElement("div");
 let div3 = document.createElement("div");
 let div4 = document.createElement("div");
-let div5 = document.createElement("div");
-let div6 = document.createElement("div");
 outputName.appendChild(div1);
 outputName.appendChild(div2);
 outputScore.appendChild(div3);
 outputScore.appendChild(div4);
-outputUid.appendChild(div5);
-outputUid.appendChild(div6);
 
 class HashTable {
   constructor() {
@@ -84,10 +79,8 @@ class HashTable {
             playerDetails = `Found it: \n[Name: ${name}, Score: ${score}, Unique Id: ${uid}]`;
             div1.innerText = "Name:";
             div3.innerText = "Score:";
-            div5.innerText = "Unique Id:";
             div2.innerText = name;
             div4.innerText = score;
-            div6.innerText = uid;
             searchPlayer.value = "";
             return playerDetails;
           }
@@ -99,10 +92,8 @@ class HashTable {
         playerDetails = `Found it: \n[Name: ${name}, Score: ${score}, Unique Id: ${uid}]`;
         div1.innerText = "Name:";
         div3.innerText = "Score:";
-        div5.innerText = "Unique Id:";
         div2.innerText = name;
         div4.innerText = score;
-        div6.innerText = uid;
         searchPlayer.value = "";
         return playerDetails;
       } else {
