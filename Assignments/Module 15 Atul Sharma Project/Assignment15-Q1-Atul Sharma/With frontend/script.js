@@ -56,10 +56,16 @@ btnArray.forEach((btn) => {
     let prod = document.getElementsByClassName(item);
     for (let p of prod) {
       item = p.innerHTML;
+    if(!myStack.products.includes(item)){
       myStack.add(item);
       alertBox.style.visibility = "visible";
       document.getElementById("alert-boxp").textContent = myStack.products;
       console.log("Added Products: " + document.getElementById("alert-boxp").textContent);
+    }else {
+      alertBox.style.visibility = "visible";
+      document.getElementById("alert-boxp").textContent = "Products is already in the cart" ;
+      console.log(document.getElementById("alert-boxp").textContent);
+    }
     }
     document.getElementById("counter").innerText = myStack.products.length;
   });

@@ -24,6 +24,7 @@ let purchase = (product, amount) => {
       ticketDetails.debit = amount;
       ticketDetails.balance = balance;
       tranactions.enqueue(ticketDetails);
+      alert(`Items purchased.. \nThe available balance is ${balance}`);
       console.log(ticketDetails);
       console.log(`The available credit balance is ${balance}`);
     }
