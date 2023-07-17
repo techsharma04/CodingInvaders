@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment16-Q1-Atul Sharma</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <div class="heading">
+                <h1>Discount Calculator</h1>
+            </div>
+            <div class="bill-div">
+                <p><small>Bill Amount</small></p>
+                <input type="number" class="amount" id="amount" value="" autofocus oninput="calculate()" />
+            </div>
+            <!-- <p><small>Calculated amount after discount..</small></p> -->
+            <div class="after-discount">
+                <label>Discount Applied:</label>
+                <input type="text" class="bill discount" id="discount" value="0%" disabled />
+            </div>
+            <div class="after-discount">
+                <label>Amount due:</label>
+                <input type="text" class="bill due" id="due" value="0" disabled />
+            </div>
+            <div class="amount-due">
+                <button>Click here for console Output</button>
+            </div>
+        </div>
+        <div class="pseudo-code">
+            <div class="heading">
+                <h1>Discount Calculator Pseudo Code</h1>
+            </div>
+            <div>
+                <p><small>Start</small></p>
+                <p>
+                    <small>1. amount = prompt().value; // Get bill amount input from
+                        user.</small>
+                </p>
+                <p>
+                    <small>2. Number(amount) // Convert the bill amount type to
+                        Number.</small>
+                </p>
+                <p>
+                    <small>3. function calculate(){} // Create function name as calculate()
+                        to calculate the discount.</small>
+                </p>
+                <p>
+                    <small>4. In HTML file: Attribute oninput="calculate()" //Add the
+                        attribue (oninput="calculate()" ) into the input field</small>
+                </p>
+                <p><small>5. If amount > 5000 then // Apply 20% discount</small></p>
+                <p>
+                    <small class="need-margin">
+                        amount = amount - amount * 20/100</small>
+                </p>
+
+                <p>
+                    <small>6. else if amount > 3000 then // Apply 15% discount</small>
+                </p>
+                <p>
+                    <small class="need-margin">
+                        amount = amount - amount * 15/100</small>
+                </p>
+
+                <p>
+                    <small>7. else if amount > 2000 then // Apply 10% discount</small>
+                </p>
+                <p>
+                    <small class="need-margin">
+                        amount = amount - amount * 10/100</small>
+                </p>
+
+                <p><small>8. else then // No discount will apply</small></p>
+                <p>
+                    <small class="need-margin">
+                        amount = amount - amount * 0/100</small>
+                </p>
+                <p>
+                    <small>9. console.log(amount) // Display the final amount in the
+                        console.</small>
+                </p>
+                <p><small>End</small></p>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
