@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  h1 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .explanation {
+    background-color: #f4f4f4;
+    padding: 30px;
+    margin-top: 10px;
+  }
