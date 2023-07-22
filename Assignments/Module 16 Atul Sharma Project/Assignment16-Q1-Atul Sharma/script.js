@@ -1,3 +1,6 @@
+
+// Using timeout function to load the page before the prompt.
+setTimeout(() => {
 const billAmount = prompt("Please enter the total bill amount");
 
 let calculate = () => {
@@ -18,5 +21,7 @@ let calculate = () => {
     return message;
 }
 
-
-console.log(calculate());
+let msg = calculate();
+console.log(msg);
+alert(`${msg} \n\nOutput is visible in the console as well.`);
+}, 500);
