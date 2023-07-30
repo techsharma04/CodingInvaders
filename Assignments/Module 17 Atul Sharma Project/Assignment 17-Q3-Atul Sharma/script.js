@@ -1,19 +1,19 @@
-function mergeSort(leftArray,rightArray) {
+function mergeSort(leftArray, rightArray) {
     var i = 0;
-    var j = 0;   
-    var results = [];      
-    while (i < leftArray.length || j < rightArray.length) {   
-     if (i === leftArray.length) {         // j is the only index leftArray   
-      results.push(rightArray[j]);   
-      j++;   
-     }    
-         else if (j === rightArray.length || leftArray[i] <= rightArray[j]) {   
-      results.push(leftArray[i]);   
-      i++;   
-     } else {   
-      results.push(rightArray[j]);   
-      j++;   
-     }   
+    var j = 0;
+    var results = [];
+    while (i < leftArray.length || j < rightArray.length) {
+        if (i === leftArray.length) {         // j is the only index leftArray   
+            results.push(rightArray[j]);
+            j++;
+        }
+        else if (j === rightArray.length || leftArray[i] <= rightArray[j]) {
+            results.push(leftArray[i]);
+            i++;
+        } else {
+            results.push(rightArray[j]);
+            j++;
+        }
     }
     return results;
 }
