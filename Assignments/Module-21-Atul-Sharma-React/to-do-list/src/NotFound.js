@@ -1,16 +1,15 @@
 
-
-import react from "react";
-import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function NotFound() {
-    let location = useLocation();
-
-    console.log(location.pathname);
 
     return (
+       <>
         <p>This page is not available</p>
+        
+      <Link to={'/login'}>Go to login</Link>
+      </>
     )
 
 }

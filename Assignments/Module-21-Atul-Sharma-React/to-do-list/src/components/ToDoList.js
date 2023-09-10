@@ -1,18 +1,26 @@
-import { useLocation } from "react-router-dom"
-
+import { useNavigate } from "react-router-dom"
+import "./todolist.css"
 
 function ToDoList() {
+    let navigate = useNavigate();
+    function logout() {
+        navigate("/login", true);
+    }
 
-    let location = useLocation();
 
-    console.log(location);
-    return(
+    return (
         <div>
-            <h1>This is a todolist component</h1>
+            <div className="msgbtn">
+                <h3>Login Successfull...</h3>
+                <button onClick={logout}>Signout</button>
+            </div>
+            <br/>
+            <br/>
+            <h1>Welcome to the todolist components.</h1>
 
         </div>
     )
-    
+
 }
 
 export default ToDoList

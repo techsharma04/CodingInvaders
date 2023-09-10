@@ -1,0 +1,9 @@
+.msgbtn{
+    padding: 0 5%;
+}
+.msgbtn > h3{
+    float: left;
+}
+.msgbtn > button{
+    float: right;
+}

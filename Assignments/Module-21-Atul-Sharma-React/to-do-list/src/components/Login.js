@@ -1,27 +1,28 @@
 import React, { useState } from 'react';
 import './login.css';
 import loginDetails from "./LoginDetails.json";
-import { useLocation } from 'react-router-dom';
+import {useLocation, useNavigate } from 'react-router-dom';
 
-function Login({updateState}) {
-
+function Login() {
 
     let location = useLocation();
+    let navigate = useNavigate();
 
-    console.log(location.pathname);
+    
     const [formData, setFormData] = useState({
         email: '',
         password: ''
     });
-
+    console.log(location);
     const {email, password} = formData;
     
     function handleSubmit(e) {
         e.preventDefault();
-        // console.log(e.target[0].value);
-        // console.log(e.target[1].value);
         if(loginDetails.email === email && loginDetails.password === password){
-            updateState(true);
+            navigate("/todolist", true);
+        }
+        else {
+            navigate("/invalidAccess", true);
         }
 
     }
