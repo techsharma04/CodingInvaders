@@ -9,7 +9,7 @@ function OverdueTasks() {
                 <Formik className="fields">
                     <Form className="form-fields">
                         <Field name="" type="checkbox" className="check"/>
-                        <h3>Overdue Tasks</h3>
+                    <h3>{localStorage.getItem('quickTask')}{console.log(localStorage.getItem('quickTask'))}</h3>
                     </Form>
                 </Formik>
             </div>

@@ -17,7 +17,7 @@ function AssignmentFirst() {
     return (
 
         <div className="container">
-            <h3>List of University in India</h3>
+            <h3>List of Universities in India</h3>
             <table className="table">
                 <thead>
                     <tr>
