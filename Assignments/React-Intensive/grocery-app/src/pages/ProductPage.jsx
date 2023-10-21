@@ -3,16 +3,18 @@ import ProductList from "../components/ProductList"
 import SubCategory from "../components/SubCategory"
 
 const ProductPage = () => {
-    return(
+    return (
         <>
             <Navbar />
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-3">
-                        <SubCategory />
-                    </div>
-                    <div className="col-md-9">
-                        <ProductList />
+            <div className="container-full">
+                <div className="container container-inside">
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <SubCategory />
+                        </div>
+                        <div className="col-sm-9">
+                            <ProductList />
+                        </div>
                     </div>
                 </div>
             </div>

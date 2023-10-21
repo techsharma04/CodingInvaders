@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
@@ -7,27 +7,13 @@ function Navbar() {
                 <div className='nav-bar'>
                     <h2>Grocery Store</h2>
                     <ul className='nav-items'>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li><a href="#categories">Products</a></li>
-                        <li>Contact Us</li>
+                        <li className="nav-item nav-link"><Link className="nav-link" to="/">Home</Link></li>
+                        <li className="nav-item nav-link"><Link className="nav-link" to="/about">About</Link></li>
+                        <li className="nav-item nav-link"><Link className="nav-link" to="/categories">Products</Link></li>
+                        <li className="nav-item nav-link"><Link className="nav-link" to="/contact">Contact</Link></li>
+                        <li className="nav-item nav-link bg-black"><Link className="nav-link" to="/login">Login</Link></li>
                     </ul>
                 </div>
-                <section class="banner_main">
-                    <div class="container" style={{width: `1170px`}}>
-                        <div class="banner_po">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <div class="text_box">
-                                        <span>Now Started</span>
-                                        <h1> <strong>Fruit And </strong> <br /> Vegetables </h1>
-                                        <a class="read_more" href="#categories" role="button">Start Shopping</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
         </nav>
     )

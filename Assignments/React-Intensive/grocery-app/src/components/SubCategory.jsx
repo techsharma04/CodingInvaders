@@ -17,10 +17,10 @@ const SubCategory = () => {
 
     return (
         <div>
-            <h2 className="text-center">Sub-Category</h2>
-            <ul class="list-group">
+            <h2 className="text-center padding-top-bottom">Sub-Category</h2>
+            <ul className="list-group">
                 {
-                    subCategories.map((item) => <li class="list-group-item">{item.subName}</li>)
+                    subCategories.map((item) => <li className="list-group-item">{item.subName}</li>)
                 }
             </ul>
         </div>

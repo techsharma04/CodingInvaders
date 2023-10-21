@@ -1,19 +1,21 @@
+import { Link } from "react-router-dom";
+import Constants from "../api/Constants";
+
 const Category = (props) => {
     const { catId, catName, catImage } = props.data
     return (
-
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div id="ho_bo" class="our_products">
-                <div class="product">
-                    <figure><img src={'http://rjtmobile.com/grocery/images/' + catImage} class="card-img-top" alt="..." /></figure>
-                </div>
-                <h3>{catName}</h3>
-                <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-outline-danger">Select</button>
+        
+            <div className="col-lg-3 col-md-6 col-sm-6">
+                <div id="ho_bo" className="our_products">
+                    <div className="product">
+                        <figure><img src={Constants.IMAGE_URL + catImage} className="card-img-top" alt="..." /></figure>
+                    </div>
+                    <h3>{catName}</h3>
+                    <div className="d-grid gap-2">
+                        <Link to={"/products/" + catId} className="btn btn-danger">Select</Link>
+                    </div>
                 </div>
             </div>
-        </div>
     )
 }
-
 export default Category;
