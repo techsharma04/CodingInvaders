@@ -6,4 +6,4 @@ age = 30
 address = "NYC"
 isFresher = True
 
-print("Assignment 1: "+ fullname, email, age, address, isFresher)
+print("Assignment 1: " + fullname, email, age, address, isFresher)
