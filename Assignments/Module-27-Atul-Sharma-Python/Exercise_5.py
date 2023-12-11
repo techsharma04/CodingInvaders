@@ -13,11 +13,10 @@ def nameLength(channels):
     musicChannels = []
 
     for channel in channels:
-        if len(channel) > 15:
-            if not (channel in musicChannels):
-                musicChannels.append(channel)
+        if len(channel) > 15 and channel not in musicChannels:
+            musicChannels.append(channel)
 
-    return musicChannels
+    return "\n".join(musicChannels)
 
 
-print(f"${nameLength(youtubeChannels)}")
+print(f"{nameLength(youtubeChannels)}")

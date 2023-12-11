@@ -13,10 +13,12 @@ def findMusicChannels(channels):
     musicChannels = []
 
     for channel in channels:
-        if any(keyword.lower() in channel.lower() for keyword in musicKeywords):
+        element = channel.lower()
+        # if any(keyword.lower() in channel.lower() for keyword in musicKeywords):
+        if "music" in element or "song" in element or "folk" in element:
             musicChannels.append(channel)
 
-    return musicChannels
+    return ", ".join(musicChannels)
 
 
-print(f"${findMusicChannels(youtubeChannels)}")
+print(f"{findMusicChannels(youtubeChannels)}")
