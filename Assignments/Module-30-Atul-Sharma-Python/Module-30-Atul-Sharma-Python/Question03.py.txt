@@ -1,0 +1,43 @@
+class Vehicle:
+    def __init__(self, name, color, price):
+        self.name = name
+        self.color = color
+        self.price = price
+
+    def max_speed(self):
+        print("Vehicle max speed is 150")
+
+    def gears(self):
+        print("Vehicle have 6 gears")
+
+    def show(self):
+        print(f"Details: {self.name} {self.color} {self.price}")
+
+
+class Car(Vehicle):
+    def max_speed(self):
+        print("Car max speed is 240")
+
+    def gears(self):
+        print("Car change 7 gears")
+
+
+class Bus(Vehicle):
+    def max_speed(self):
+        print("Bus max speed is 200")
+
+    def gears(self):
+        print("Bus change 8 gears")
+
+
+# Creating objects and testing the methods
+car_obj = Car(name="BMW", color="Red", price=20000)
+car_obj.show()
+car_obj.max_speed()
+car_obj.gears()
+print("\n")
+
+bus_obj = Bus(name="Tavera x1", color="white", price=75000)
+bus_obj.show()
+bus_obj.max_speed()
+bus_obj.gears()

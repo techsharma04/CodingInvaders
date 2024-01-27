@@ -1,0 +1,15 @@
+# Input the number of test cases
+T = int(input("Enter the number of test cases: "))
+
+# Process each test case
+for _ in range(T):
+    # Input the number for the current test case
+    ni = int(input())
+    
+    # Determine the relation with 7 and print the result
+    if ni > 7:
+        print("UP")
+    elif ni < 7:
+        print("DOWN")
+    else:
+        print("EQUAL")

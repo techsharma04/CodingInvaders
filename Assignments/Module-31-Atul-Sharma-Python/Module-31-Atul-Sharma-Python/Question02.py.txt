@@ -1,0 +1,8 @@
+# Input the weights as a list of integers
+weights = list(map(int, input().split()))
+
+# Calculate the average weight
+average_weight = sum(weights) / len(weights)
+
+# Print the result with 6 decimal places
+print("{:.6f}".format(average_weight))

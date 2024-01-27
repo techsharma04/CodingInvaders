@@ -1,0 +1,21 @@
+# Function to check if a number is a Sum-Product Number
+def is_sum_product_number(number):
+    digits = [int(digit) for digit in str(number)]
+    sum_of_digits = sum(digits)
+    product_of_digits = 1 if 0 not in digits else 0  # Product is 0 if any digit is 0
+    for digit in digits:
+        product_of_digits *= digit
+
+    return sum_of_digits * product_of_digits == number
+
+# Input the number of test cases
+T = int(input("Enter the number of test cases: "))
+
+# Process each test case
+for _ in range(T):
+    # Input the number for the current test case
+    num = int(input())
+    
+    # Check if the number is a Sum-Product Number and print the result
+    result = "Yes" if is_sum_product_number(num) else "No"
+    print(result)

@@ -1,0 +1,15 @@
+# Function to calculate the sum of digits
+def sum_of_digits(number):
+    return sum(int(digit) for digit in str(number))
+
+# Input the number of test cases
+T = int(input("Enter the number of test cases: "))
+
+# Process each test case
+for _ in range(T):
+    # Input the number for the current test case
+    num = int(input())
+    
+    # Calculate the sum of digits and print the result
+    result = sum_of_digits(num)
+    print(result)

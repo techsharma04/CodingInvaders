@@ -1,0 +1,26 @@
+class Calculate:
+    def add(self, *args):
+        if len(args) == 0:
+            return 0
+        elif len(args) == 2:
+            return sum(args)
+        elif len(args) == 3:
+            return sum(args)
+        else:
+            raise ValueError("Invalid number of arguments")
+
+
+# Creating objects and testing the add method
+calculator = Calculate()
+
+# No arguments
+result1 = calculator.add()
+print(f"Sum Value: {result1}")
+
+# Sum of 2 numbers
+result2 = calculator.add(4, 5)
+print(f"Sum Value: {result2}")
+
+# Sum of 3 numbers
+result3 = calculator.add(3, 4, 3)
+print(f"Sum Value: {result3}")

@@ -1,0 +1,31 @@
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def Perimeter(self):
+        return 2 * (self.length + self.width)
+
+    def Area(self):
+        return self.length * self.width
+
+    def display(self):
+        print(f"The length of rectangle is:  {self.length}\nThe width of rectangle is:  {self.width}\nThe perimeter of rectangle is:  {self.Perimeter()}\nThe area of rectangle is:  {self.Area()}\n{'-' * 30}")
+
+
+class Cuboid(Rectangle):
+    def __init__(self, length, width, height):
+        super().__init__(length, width)
+        self.height = height
+
+    def Volume(self):
+        return self.length * self.width * self.height
+
+
+# Creating a Rectangle object and testing the display() method
+my_rectangle = Rectangle(length=7, width=5)
+my_rectangle.display()
+
+# Creating a Cuboid object and testing the Volume() method
+my_cuboid = Cuboid(length=4, width=5, height=7)
+print(f"The volume of my_cuboid is:  {my_cuboid.Volume()}")

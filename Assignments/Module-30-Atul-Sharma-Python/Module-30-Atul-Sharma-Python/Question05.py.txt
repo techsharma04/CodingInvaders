@@ -1,0 +1,34 @@
+from abc import ABC, abstractmethod
+
+class Bank(ABC):
+    def bank_info(self):
+        print("Welcome to the bank")
+
+    @abstractmethod
+    def interest(self, principal):
+        pass
+
+
+class SBI(Bank):
+    def interest(self, principal):
+        rate = 0.05  # SBI provides 5% interest
+        interest_amount = principal * rate
+        print(f"In SBI bank, {interest_amount} rupees interest")
+
+
+class Axis(Bank):
+    def interest(self, principal):
+        rate = 0.08  # Axis provides 8% interest
+        interest_amount = principal * rate
+        print(f"In Axis bank, {interest_amount} rupees interest")
+
+
+# Creating objects and testing the methods
+sbi_bank = SBI()
+sbi_bank.bank_info()
+sbi_bank.interest(100)  # Example principal amount: 100
+print("\n")
+
+axis_bank = Axis()
+axis_bank.bank_info()
+axis_bank.interest(100)  # Example principal amount: 100

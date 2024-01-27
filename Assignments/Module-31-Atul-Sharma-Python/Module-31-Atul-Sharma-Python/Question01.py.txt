@@ -1,0 +1,24 @@
+def even_digits_numbers(arr):
+    result = []
+
+    for num in arr:
+        digit_count = len(str(num))
+        if digit_count % 2 == 0:
+            result.append(num)
+
+    return result
+
+
+# Function to process each test case
+def process_test_case():
+    n, *numbers = map(int, input().split())
+    result = even_digits_numbers(numbers)
+    print(" ".join(map(str, result)))
+
+
+# Input the number of test cases
+T = int(input("Enter the number of test cases: "))
+
+# Process each test case
+for _ in range(T):
+    process_test_case()

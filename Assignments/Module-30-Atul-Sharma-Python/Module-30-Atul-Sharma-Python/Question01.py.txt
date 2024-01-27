@@ -1,0 +1,21 @@
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print(f"Person name :  {self.name}\nPerson age =  {self.age}\n{'-' * 30}")
+
+
+class Student(Person):
+    def __init__(self, name, age, section):
+        super().__init__(name, age)
+        self.section = section
+
+    def displayStudent(self):
+        print(f"Student name :  {self.name}\nStudent age =  {self.age}\nStudent section =  {self.section}\n{'-' * 30}")
+
+
+# Creating a Student object and testing the displayStudent method
+student_obj = Student(name="Tony", age=20, section="Mathematics")
+student_obj.displayStudent()
