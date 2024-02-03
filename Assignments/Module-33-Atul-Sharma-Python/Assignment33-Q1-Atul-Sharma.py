@@ -1,4 +1,3 @@
-# Linear search
 
 
 def duplicate_nos(arr):

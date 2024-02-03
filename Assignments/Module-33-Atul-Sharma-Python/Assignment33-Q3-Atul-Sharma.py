@@ -1,4 +1,4 @@
-# bubble sort
+
 def bubble_srt(arr):
     swapCount = 0
     for i in range(len(arr)):

@@ -1,4 +1,4 @@
-# binary search
+
 def find_position(arr, key, l, r):
     while l <= r:
         mid = l + (r - l) // 2
