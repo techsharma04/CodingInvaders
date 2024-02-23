@@ -1,0 +1,28 @@
+.wrapper {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+}
+
+.author {
+  color: #888;
+  font-size: 24px;
+}
+
+.h1 {
+  color: #000;
+}
+.review {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: space-evenly;
+  
+  display: none;
+}
+.rating {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+}
