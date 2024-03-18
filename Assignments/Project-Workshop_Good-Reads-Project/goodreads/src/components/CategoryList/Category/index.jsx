@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 const Category = (props) => {
     const { catId, catName, catImage } = props.data;
 
@@ -6,11 +9,13 @@ const Category = (props) => {
             <div className="card">
                 <img src={catImage} className="card-img-top" alt="..." height="200" width="400" />
                 <div className="card-body">
-                    <h5 className="card-title">{catId}{catName}</h5>
+                    <Link to="/books">
+                    <h5 className="card-title">{catName}</h5>
+                    </Link>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Category
+export default Category 
